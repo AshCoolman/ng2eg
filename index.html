@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <title>ng2do</title>
+  <link rel="stylesheet" href="deps/css/main.css" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+  <ng2eg-app>Loading...</ng2eg-app>
+
+  <script src="/quickstart/dist/es6-shim.js"></script>
+
+  <script>
+    System.paths = {
+      'angular2/*':'quickstart/angular2/*.js', // Angular
+      'rtts_assert/*': 'quickstart/rtts_assert/*.js', //Runtime assertions
+      'ng2eg': 'ng2eg.js',  
+      'services/*': 'deps/services/*.js'
+    };
+
+    System.import('ng2eg').then(function(module) {
+      module.main();
+    }, console.log.bind(console));
+  </script>
+  </body>
+</html>

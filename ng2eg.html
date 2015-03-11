@@ -1,0 +1,31 @@
+<style>@import "deps/css/base.css";</style>
+
+<section id="ng2egapp">
+
+  <header id="header">
+    <h1>ng2egs</h1>
+    <input
+      id="keys"
+      placeholder="keys will be recorded"
+      autofocus
+      #newng2eg
+      (keyup)="addKey($event, newng2eg)">
+  </header>
+
+  <section id="main">
+    <ul id="ng2eg-list">
+      <li *foreach="#key in keys">
+          <span>{{key}}</span>
+      </li>
+    </ul>
+  </section>
+
+  <footer id="footer">
+    
+  </footer>
+
+</section>
+
+<footer id="info">
+  <p>Created by <a href="http://twitter.com/ash_coolman">Ash Coolman</a></p>
+</footer>
