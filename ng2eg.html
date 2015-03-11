@@ -1,4 +1,5 @@
 <style>@import "deps/css/base.css";</style>
+<style>@import "deps/css/custom.css";</style>
 
 <section id="ng2egapp">
 
@@ -13,11 +14,14 @@
   </header>
 
   <section id="main">
-    <ul id="ng2eg-list">
-      <li *foreach="#key in keys">
-          <span>{{key}}</span>
-      </li>
-    </ul>
+    <h2>Keys pressed:</h2>
+    <i>Press ENTER to clear</i>
+    <div id="ng2eg-list">
+      <code letter *foreach="#key in keys"><strong>{{key.char}}</strong></code>
+    </div>
+    <div id="ng2eg-list">
+      <code letter *foreach="#key in keys">{{key.val}}</code>
+    </div>
   </section>
 
   <footer id="footer">

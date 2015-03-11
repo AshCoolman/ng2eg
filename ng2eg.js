@@ -21,7 +21,11 @@ class Ng2EgApp {
     this.keys = []
   }
   addKey($event, target) {
-    this.keys.push($event.which);
+    var keyData = {
+      val: $event.which,
+      char: String.fromCharCode($event.which)
+    }
+    this.keys.push(keyData);
     if($event.which === 13) { // ENTER_KEY
       this.keys = [];
     }
